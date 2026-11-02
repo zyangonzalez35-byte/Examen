@@ -4,7 +4,7 @@
   "metadata": {
     "colab": {
       "provenance": [],
-      "authorship_tag": "ABX9TyP8cFBqjuh0sLrp7scADpmN",
+      "authorship_tag": "ABX9TyMhqacJcqQQJbzfhU9cjyvC",
       "include_colab_link": true
     },
     "kernelspec": {
@@ -324,11 +324,11 @@
         "#Subir archivos a colab\n",
         "print(\"Selecciona el archivo campo.in\")\n",
         "archivos = files.upload()\n",
-        "campo_in = next(iter(archivos))\n",
+        "nombre_archivo = next(iter(archivos))\n",
         "\n",
         "puntos = []\n",
         "\n",
-        "with open(campo_in, \"r\") as archivo:\n",
+        "with open(nombre_archivo, \"r\") as archivo:\n",
         "    for linea in archivo:\n",
         "        datos = linea.split()\n",
         "\n",
@@ -341,7 +341,6 @@
         "            break\n",
         "\n",
         "        puntos.append((x, y))\n",
-        "\n",
         "#Buscar el triangulo de mas area\n",
         "mayor_area = 0\n",
         "mejor_triangulo = None\n",
